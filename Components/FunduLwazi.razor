@@ -1,0 +1,95 @@
+<section id="fundulwazi" class="fundulwazi-section" data-aos="fade-up">
+
+    <div class="project-header">
+
+        <div class="project-header-content">
+
+            <span class="section-tag">
+                FLAGSHIP PROJECT
+            </span>
+
+            <h2>
+                FunduLwazi
+                <span>AI Document Intelligence</span>
+            </h2>
+
+            <p>
+                FunduLwazi helps organisations process, understand and
+                extract insights from complex business documents using
+                Artificial Intelligence, Azure AI and modern cloud
+                technologies.
+            </p>
+
+            <a href="https://fundulwazi-ethjdqbpgnbpbvek.southafricanorth-01.azurewebsites.net/?key=REDACTED" target="_blank" rel="noopener noreferrer" class="visit-link">
+                Visit FunduLwazi →
+            </a>
+
+        </div>
+
+        <button class="info-button" @onclick="ToggleStory" aria-label="Read the story behind FunduLwazi">
+            ⓘ
+        </button>
+
+    </div>
+
+    @if (showStory)
+    {
+        <div class="story-overlay" @onclick="ToggleStory">
+
+            <div class="story-modal" @onclick:stopPropagation>
+
+                <button class="close-button" @onclick="ToggleStory" aria-label="Close">
+                    ×
+                </button>
+
+                <span class="story-label">
+                    THE STORY BEHIND FUNDULWAZI
+                </span>
+
+                <h3>
+                    From observation to solution.
+                </h3>
+
+                <p>
+                    FunduLwazi wasn't created because I wanted to build an AI
+                    application. It started after watching my sister spend
+                    countless evenings manually reading, sorting, and
+                    processing large volumes of documents.
+                </p>
+
+                <p>
+                    Instead of immediately writing code, I observed her
+                    workflow, asked questions, identified repetitive tasks,
+                    and researched how artificial intelligence could reduce
+                    that workload.
+                </p>
+
+                <p>
+                    That experience shaped how I approach every project:
+                </p>
+
+                <blockquote class="story-quote">
+                    "First, understand the people and the problem, then build
+                    technology that genuinely helps them."
+                </blockquote>
+
+            </div>
+
+        </div>
+    }
+
+</section>
+
+@code {
+
+    private bool showStory = false;
+
+    private void ToggleStory()
+
+    {
+
+        showStory = !showStory;
+
+    }
+
+}

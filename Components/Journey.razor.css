@@ -1,0 +1,355 @@
+/* ===========================================================
+   JOURNEY SECTION
+=========================================================== */
+
+.journey-section {
+    position: relative;
+    padding: 8rem 2rem;
+    overflow: hidden;
+}
+
+.journey-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===========================================================
+   HEADER
+=========================================================== */
+
+.journey-heading {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 5rem;
+}
+
+.section-tag {
+    display: inline-block;
+    padding: .65rem 1.2rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,.75);
+    border: 1px solid rgba(255,255,255,.8);
+    backdrop-filter: blur(20px);
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    font-size: .75rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+.journey-heading h2 {
+    font-size: clamp(2.8rem,6vw,4.8rem);
+    line-height: 1.2;
+    color: var(--color-ink);
+    margin-bottom: 1.5rem;
+    letter-spacing: -.03em;
+}
+
+.journey-heading h2 span {
+    display: block;
+    background: linear-gradient(90deg,var(--color-ink),var(--color-primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.journey-heading p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: var(--color-muted);
+}
+
+/* ===========================================================
+   TIMELINE
+=========================================================== */
+
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(
+        to bottom,
+        rgba(193,98,45,.15),
+        rgba(193,98,45,.9)
+    );
+}
+
+/* ===========================================================
+   CARD
+=========================================================== */
+
+.timeline-card {
+    position: relative;
+    margin-left: 2rem;
+
+    padding: 2rem;
+
+    border-radius: 28px;
+
+    background: rgba(255,255,255,.65);
+
+    backdrop-filter: blur(28px);
+
+    border: 1px solid rgba(255,255,255,.9);
+
+    box-shadow:
+        0 20px 60px rgba(42,37,33,.06);
+
+    transition: .35s ease;
+}
+
+.timeline-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: -43px;
+
+    top: 42px;
+
+    width: 18px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: var(--color-primary);
+
+    border: 5px solid white;
+
+    box-shadow: 0 0 0 6px rgba(193,98,45,.35);
+}
+
+.timeline-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 30px 70px rgba(42,37,33,.10);
+}
+
+/* ===========================================================
+   FEATURED CARD
+=========================================================== */
+
+.timeline-card.featured {
+
+    background: linear-gradient(
+        145deg,
+        var(--color-primary),
+        var(--color-accent)
+    );
+
+    border: none;
+
+    color: #ffffff;
+
+    box-shadow: 0 30px 80px rgba(42,37,33,.18);
+}
+
+.timeline-card.featured h3 {
+
+    color: #ffffff !important;
+}
+
+.timeline-card.featured p {
+
+    color: rgba(255,255,255,.92) !important;
+}
+
+.timeline-card.featured .timeline-year {
+
+    background: rgba(255,255,255,.18);
+
+    color: #ffffff !important;
+}
+
+.timeline-card.featured::before {
+
+    background: var(--color-surface-muted);
+}
+
+/* ===========================================================
+   TEXT
+=========================================================== */
+
+.timeline-year {
+
+    display: inline-block;
+
+    padding: .4rem .9rem;
+
+    border-radius: 999px;
+
+    background: rgba(193,98,45,.28);
+
+    color: var(--color-ink);
+
+    font-weight: 700;
+
+    margin-bottom: 1rem;
+
+    font-size: .9rem;
+}
+
+.timeline-card h3 {
+
+    margin-bottom: 1rem;
+
+    color: var(--color-ink);
+
+    font-size: 1.6rem;
+}
+
+.timeline-card p {
+
+    line-height: 1.9;
+
+    color: var(--color-muted-2);
+}
+
+/* Keep featured text white */
+
+.timeline-card.featured h3 {
+
+    color: #ffffff !important;
+}
+
+.timeline-card.featured p {
+
+    color: rgba(255,255,255,.92) !important;
+}
+
+.timeline-card.featured .timeline-year {
+
+    color: #ffffff !important;
+}
+
+/* ===========================================================
+   BACKGROUND
+=========================================================== */
+
+.journey-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+
+    height: 420px;
+
+    border-radius: 50%;
+
+    background: rgba(193,98,45,.18);
+
+    filter: blur(90px);
+
+    top: -120px;
+
+    right: -100px;
+}
+
+.journey-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: rgba(248,228,204,.25);
+
+    filter: blur(90px);
+
+    bottom: -100px;
+
+    left: -120px;
+}
+
+/* ===========================================================
+   RESPONSIVE
+=========================================================== */
+
+@media (max-width:900px){
+
+    .timeline{
+
+        padding-left:1rem;
+    }
+
+    .timeline-card{
+
+        margin-left:1.5rem;
+    }
+}
+
+@media (max-width:768px){
+
+    .journey-section{
+
+        padding:6rem 1.5rem;
+    }
+
+    .timeline::before{
+
+        left:10px;
+    }
+
+    .timeline-card{
+
+        margin-left:1rem;
+
+        padding:1.5rem;
+    }
+
+    .timeline-card::before{
+
+        left:-31px;
+    }
+
+    .journey-heading h2{
+
+        font-size:2.5rem;
+    }
+}
+
+@media (max-width:480px){
+
+    .journey-section{
+
+        padding:5rem 1rem;
+    }
+
+    .timeline{
+
+        gap:2rem;
+    }
+
+    .timeline-card{
+
+        padding:1.35rem;
+    }
+
+    .timeline-card h3{
+
+        font-size:1.3rem;
+    }
+}

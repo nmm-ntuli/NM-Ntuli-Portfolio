@@ -1,0 +1,24 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Rider
+.idea/
+
+# macOS
+.DS_Store
+
+# Local environment artifacts (not part of the project)
+.claude/
+.dotnet-home/
+.nuget/
+Library/
+
+# Logs
+*.log

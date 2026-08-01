@@ -1,0 +1,11 @@
+.navbar-toggler {
+    display: none;
+}
+
+.top-row,
+.navbar-brand,
+.bi,
+.nav-item,
+.nav-scrollable {
+    display: none;
+}

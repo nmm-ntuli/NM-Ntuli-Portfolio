@@ -1,0 +1,249 @@
+/* ===========================================================
+   EXPERIENCE SECTION
+=========================================================== */
+
+.experience-section {
+    position: relative;
+    padding: 8rem 2rem;
+    overflow: hidden;
+}
+
+.experience-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===========================================================
+   HEADER
+=========================================================== */
+
+.experience-header {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 5rem;
+}
+
+.experience-header h2 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1.2;
+    color: var(--color-ink);
+    margin-bottom: 1.5rem;
+    letter-spacing: -.03em;
+}
+
+.experience-header h2 span {
+    display: block;
+    background: linear-gradient(90deg,var(--color-ink),var(--color-primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.experience-header p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: var(--color-muted);
+}
+
+/* ===========================================================
+   TIMELINE
+=========================================================== */
+
+.experience-timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 3rem;
+}
+
+.experience-timeline::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(
+        to bottom,
+        rgba(193,98,45,.15),
+        rgba(193,98,45,.9)
+    );
+}
+
+/* ===========================================================
+   CARD
+=========================================================== */
+
+.experience-card {
+    position: relative;
+    margin-left: 2rem;
+    padding: 2.2rem;
+    border-radius: 30px;
+    background: rgba(255,255,255,.72);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255,255,255,.85);
+    box-shadow: 0 20px 60px rgba(42,37,33,.06);
+    transition: all .35s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 35px 80px rgba(42,37,33,.12);
+}
+
+.experience-card::before {
+    content: "";
+    position: absolute;
+    left: -45px;
+    top: 42px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    border: 5px solid white;
+    box-shadow: 0 0 0 6px rgba(193,98,45,.35);
+}
+
+/* ===========================================================
+   FEATURED
+=========================================================== */
+
+.experience-card.featured {
+    background: linear-gradient(
+        135deg,
+        var(--color-ink),
+        var(--color-ink-soft)
+    );
+    color: white;
+}
+
+.experience-card.featured h3,
+.experience-card.featured h4,
+.experience-card.featured p,
+.experience-card.featured li,
+.experience-card.featured .experience-date {
+    color: white;
+}
+
+.experience-card.featured::before {
+    background: var(--color-surface-muted);
+}
+
+/* ===========================================================
+   TEXT
+=========================================================== */
+
+.experience-date {
+    display: inline-block;
+    padding: .45rem .9rem;
+    border-radius: 999px;
+    background: rgba(193,98,45,.25);
+    color: var(--color-ink);
+    font-size: .85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.experience-card h3 {
+    font-size: 1.7rem;
+    color: var(--color-ink);
+    margin-bottom: .4rem;
+}
+
+.experience-card h4 {
+    font-size: 1rem;
+    color: var(--color-muted-2);
+    margin-bottom: 1.3rem;
+    font-weight: 500;
+}
+
+.experience-card p {
+    line-height: 1.9;
+    color: var(--color-muted);
+    margin-bottom: 1.5rem;
+}
+
+.experience-card ul {
+    padding-left: 1.2rem;
+}
+
+.experience-card li {
+    margin-bottom: .75rem;
+    color: var(--color-muted);
+}
+
+/* ===========================================================
+   BACKGROUND
+=========================================================== */
+
+.experience-section::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    top: -120px;
+    right: -120px;
+    background: rgba(193,98,45,.18);
+    filter: blur(90px);
+    z-index: -1;
+}
+
+.experience-section::after {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    bottom: -120px;
+    left: -120px;
+    background: rgba(251,247,241,.25);
+    filter: blur(90px);
+    z-index: -1;
+}
+
+/* ===========================================================
+   RESPONSIVE
+=========================================================== */
+
+@media (max-width:768px){
+
+    .experience-section{
+        padding:6rem 1.5rem;
+    }
+
+    .experience-header h2{
+        font-size:2.6rem;
+    }
+
+    .experience-timeline{
+        padding-left:1.5rem;
+    }
+
+    .experience-card{
+        margin-left:1rem;
+        padding:1.8rem;
+    }
+
+    .experience-card::before{
+        left:-30px;
+    }
+}
+
+@media (max-width:480px){
+
+    .experience-section{
+        padding:5rem 1rem;
+    }
+
+    .experience-card{
+        padding:1.5rem;
+        border-radius:24px;
+    }
+
+    .experience-card h3{
+        font-size:1.45rem;
+    }
+}
