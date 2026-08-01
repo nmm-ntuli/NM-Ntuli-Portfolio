@@ -1,0 +1,115 @@
+html, body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family: var(--font-body);
+
+    background: linear-gradient(135deg, #fdfaf5 0%, #fbf3e8 45%, #fbf0e4 100%);
+
+    color: var(--color-ink);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+#butterflies {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+
+    height: 100vh;
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+.gate-card {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 560px;
+
+    margin: 2rem;
+
+    padding: 3.5rem;
+
+    border-radius: 32px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,.82);
+
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    border: 1px solid rgba(255,255,255,.9);
+
+    box-shadow: 0 30px 90px rgba(42,37,33,.1);
+}
+
+.gate-tag {
+
+    display: inline-block;
+
+    margin-bottom: 1.25rem;
+
+    padding: .4rem 1rem;
+
+    border-radius: 999px;
+
+    background: var(--color-surface-muted);
+
+    color: var(--color-primary);
+
+    font-size: .75rem;
+
+    font-weight: 700;
+
+    letter-spacing: .1em;
+}
+
+.gate-card h1 {
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+
+    line-height: 1.25;
+
+    margin: 0 0 1rem;
+}
+
+.gate-signature {
+
+    display: block;
+
+    margin-bottom: 1.25rem;
+
+    font-family: var(--font-accent);
+
+    font-size: 1.3rem;
+
+    color: var(--color-primary);
+}
+
+.gate-card p {
+
+    margin: 0 0 .5rem;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+    color: var(--color-muted);
+}

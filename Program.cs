@@ -1,12 +1,15 @@
 using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.RateLimiting;
 using NolwaziPortfolio.Components;
+using NolwaziPortfolio.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddMemoryCache();
 
 builder.Services.AddRateLimiter(options =>
 {
@@ -57,8 +60,11 @@ app.Use(async (context, next) =>
 });
 
 app.UseStaticFiles();
+app.UseAccessGate();
 app.UseRateLimiter();
 app.UseAntiforgery();
+
+app.MapGet("/healthz", () => Results.Ok("healthy"));
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();

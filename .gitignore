@@ -1,6 +1,8 @@
 # Build results
 bin/
 obj/
+publish/
+publish.zip
 
 # Visual Studio / VS Code
 .vs/
