@@ -6,11 +6,10 @@
 
     padding: 4rem 2rem 2rem;
 
-    border-top: 1px solid rgba(255,255,255,.6);
+    border-top: 1px solid rgba(42,37,33,.08);
 
-    background: rgba(255,255,255,.45);
+    background: var(--color-surface);
 
-    backdrop-filter: blur(20px);
 }
 
 .footer-container {
@@ -55,7 +54,7 @@
 
     background: var(--color-surface-muted);
 
-    border: 1px solid rgba(193,98,45,.14);
+    border: 1px solid rgba(155,127,214,.14);
 }
 
 .footer-brand h3 {

@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) return;
 
-    const BLOOM_COLORS = ['#C1622D', '#E8A24E', '#9A4D22', '#D98B5F', '#E2A87A'];
-    const STEM_COLOR = '#4A3F38';
-    const CENTER_COLOR = '#E8A24E';
+    const BLOOM_COLORS = ['#9B7FD6', '#DD8A34', '#2B3A5C', '#7EA1EA', '#F0B454'];
+    const STEM_COLOR = '#3D3252';
+    const CENTER_COLOR = '#F0B454';
 
     const MAX_FLOWERS = 30;
     const LIFESPAN = 3.4; // seconds

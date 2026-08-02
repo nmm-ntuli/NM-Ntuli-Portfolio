@@ -19,8 +19,8 @@
 
 .tech-header {
     max-width: 760px;
-    margin: 0 auto 5rem;
-    text-align: center;
+    margin: 0 0 5rem;
+    text-align: left;
 }
 
 .tech-header h2 {
@@ -33,10 +33,7 @@
 
 .tech-header h2 span {
     display: block;
-    background: linear-gradient(90deg, var(--color-ink), var(--color-primary));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-primary);
 }
 
 .tech-header p {
@@ -64,10 +61,8 @@
     overflow: hidden;
     padding: 2rem;
     border-radius: 28px;
-    background: rgba(255,255,255,.72);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255,255,255,.85);
+    background: var(--color-surface);
+    border: 1px solid rgba(42,37,33,.08);
     box-shadow: 0 20px 60px rgba(42,37,33,.06);
     transition: all .35s ease;
 }
@@ -83,7 +78,7 @@
     inset: 0;
     background: linear-gradient(
         135deg,
-        rgba(193,98,45,.15),
+        rgba(155,127,214,.15),
         transparent 60%
     );
     opacity: 0;
@@ -140,31 +135,7 @@
    BACKGROUND EFFECTS
 =========================================================== */
 
-.tech-section::before {
-    content: "";
-    position: absolute;
-    width: 420px;
-    height: 420px;
-    border-radius: 50%;
-    top: -120px;
-    left: -120px;
-    background: rgba(193,98,45,.18);
-    filter: blur(90px);
-    z-index: -1;
-}
 
-.tech-section::after {
-    content: "";
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    bottom: -120px;
-    right: -120px;
-    background: rgba(251,247,241,.22);
-    filter: blur(90px);
-    z-index: -1;
-}
 
 /* ===========================================================
    RESPONSIVE

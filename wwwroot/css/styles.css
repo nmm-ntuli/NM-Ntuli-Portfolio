@@ -3,23 +3,32 @@
     --font-display: 'Fraunces', 'Instrument Serif', serif;
     --font-body: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --font-accent: 'Caveat', cursive;
+    --font-mono: 'IBM Plex Mono', 'SF Mono', monospace;
 
     /* Surfaces */
-    --color-bg: #fbf7f1;
+    --color-bg: #f6f3ec;
     --color-surface: #ffffff;
-    --color-surface-muted: #f6ede3;
-    --color-surface-hover: #f0e1ce;
+    --color-surface-muted: #f1ecdd;
+    --color-surface-hover: #eae2c8;
 
     /* Text */
-    --color-ink: #2a2521;
-    --color-ink-soft: #4a3f38;
-    --color-muted: #6b5f55;
-    --color-muted-2: #8a7d70;
+    --color-ink: #241b38;
+    --color-ink-soft: #3d3252;
+    --color-muted: #5b5470;
+    --color-muted-2: #7d7692;
 
-    /* Brand */
-    --color-primary: #c1622d;
-    --color-primary-dark: #9a4d22;
-    --color-accent: #e8a24e;
+    /* Brand — violet is the dominant identity color; amber is reserved
+       for the one action per view (CTAs). Navy/sky/sand/gold are the
+       supporting "data legend" palette used for variety in small accents. */
+    --color-primary: #9b7fd6;
+    --color-primary-dark: #7a5fb8;
+    --color-accent: #dd8a34;
+    --color-accent-dark: #b5701f;
+
+    --color-navy: #2b3a5c;
+    --color-sky: #7ea1ea;
+    --color-sand: #e8e39d;
+    --color-gold: #f0b454;
 }
 
 html {
@@ -30,7 +39,7 @@ html {
 body {
     margin: 0;
     font-family: var(--font-body);
-    background: linear-gradient(135deg, #fdfaf5 0%, #fbf3e8 45%, #fbf0e4 100%);
+    background: linear-gradient(135deg, #f8f6ef 0%, #f6f3ec 50%, #f3efe2 100%);
     color: var(--color-ink);
 }
 
@@ -42,6 +51,28 @@ h1, h2, h3, h4 {
     font-family: var(--font-display);
     font-weight: 600;
     letter-spacing: -0.01em;
+}
+
+.section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--color-navy);
+}
+
+.section-tag::before {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-accent);
 }
 
 a, .btn-link {

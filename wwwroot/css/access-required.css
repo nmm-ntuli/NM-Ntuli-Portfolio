@@ -6,7 +6,7 @@ html, body {
 
     font-family: var(--font-body);
 
-    background: linear-gradient(135deg, #fdfaf5 0%, #fbf3e8 45%, #fbf0e4 100%);
+    background: linear-gradient(135deg, #f8f6ef 0%, #f6f3ec 50%, #f3efe2 100%);
 
     color: var(--color-ink);
 
@@ -50,14 +50,11 @@ html, body {
 
     text-align: center;
 
-    background: rgba(255,255,255,.82);
+    background: var(--color-surface);
 
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(36,27,56,.08);
 
-    border: 1px solid rgba(255,255,255,.9);
-
-    box-shadow: 0 30px 90px rgba(42,37,33,.1);
+    box-shadow: 0 30px 90px rgba(36,27,56,.1);
 }
 
 .gate-tag {

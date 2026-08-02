@@ -35,13 +35,13 @@
 
   // palette built from the requested colors, paired as (light wing tip, deep wing base)
   const COLORS = [
-    ['#F7B557', '#C1521E'],
-    ['#CDD0DB', '#9197AA'],
-    ['#F7B557', '#E27921'],
-    ['#CDD0DB', '#C1521E'],
-    ['#9197AA', '#E27921'],
-    ['#E27921', '#C1521E'],
-    ['#9197AA', '#CDD0DB']
+    ['#F0B454', '#DD8A34'],
+    ['#7EA1EA', '#2B3A5C'],
+    ['#F0B454', '#9B7FD6'],
+    ['#E8E39D', '#2B3A5C'],
+    ['#7EA1EA', '#9B7FD6'],
+    ['#9B7FD6', '#DD8A34'],
+    ['#E8E39D', '#7EA1EA']
   ];
 
   const COUNT = 7;
@@ -161,8 +161,8 @@
 
     // body: head, thorax, abdomen as soft dark capsule
     const bodyGrad = ctx.createLinearGradient(0, -s * 0.4, 0, s * 0.5);
-    bodyGrad.addColorStop(0, '#2A2E38');
-    bodyGrad.addColorStop(1, '#3A3F4D');
+    bodyGrad.addColorStop(0, '#241B38');
+    bodyGrad.addColorStop(1, '#3D3252');
     ctx.fillStyle = bodyGrad;
     ctx.beginPath();
     ctx.ellipse(0, s * 0.05, s * 0.06, s * 0.45, 0, 0, Math.PI * 2);
@@ -174,7 +174,7 @@
     ctx.fill();
 
     // antennae
-    ctx.strokeStyle = '#2A2E38';
+    ctx.strokeStyle = '#241B38';
     ctx.lineWidth = s * 0.02;
     ctx.lineCap = 'round';
     ctx.beginPath();
@@ -183,7 +183,7 @@
     ctx.moveTo(0, -s * 0.46);
     ctx.quadraticCurveTo(s * 0.12, -s * 0.62, s * 0.18, -s * 0.72);
     ctx.stroke();
-    ctx.fillStyle = '#2A2E38';
+    ctx.fillStyle = '#241B38';
     ctx.beginPath();
     ctx.arc(-s * 0.18, -s * 0.72, s * 0.025, 0, Math.PI * 2);
     ctx.arc(s * 0.18, -s * 0.72, s * 0.025, 0, Math.PI * 2);

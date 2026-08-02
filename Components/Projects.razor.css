@@ -19,8 +19,8 @@
 
 .projects-header {
     max-width: 760px;
-    margin: 0 auto 6rem;
-    text-align: center;
+    margin: 0 0 6rem;
+    text-align: left;
 }
 
 .projects-header h2 {
@@ -33,10 +33,7 @@
 
 .projects-header h2 span {
     display: block;
-    background: linear-gradient(90deg,var(--color-ink),var(--color-primary));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-primary);
 }
 
 .projects-header p {
@@ -69,13 +66,11 @@
 
     border-radius: 30px;
 
-    background: rgba(255,255,255,.72);
+    background: var(--color-surface);
 
-    backdrop-filter: blur(24px);
 
-    -webkit-backdrop-filter: blur(24px);
 
-    border: 1px solid rgba(255,255,255,.85);
+    border: 1px solid rgba(42,37,33,.08);
 
     box-shadow: 0 20px 60px rgba(42,37,33,.06);
 
@@ -105,7 +100,7 @@
 
     background: linear-gradient(
         135deg,
-        rgba(193,98,45,.14),
+        rgba(155,127,214,.14),
         transparent 60%
     );
 
@@ -131,7 +126,7 @@
 
     border-radius: 999px;
 
-    background: rgba(193,98,45,.28);
+    background: rgba(155,127,214,.28);
 
     color: var(--color-ink);
 
@@ -184,7 +179,7 @@ border-bottom:1px solid rgba(42,37,33,.08);
 
     border-radius: 999px;
 
-    background:rgba(193,98,45,.22);
+    background:rgba(155,127,214,.22);
 
     color: var(--color-ink);
 
@@ -242,7 +237,7 @@ border-bottom:1px solid rgba(42,37,33,.08);
 
 .coming-soon {
 
-    border:1.5px dashed rgba(193,98,45,.22);
+    border:1.5px dashed rgba(155,127,214,.22);
 
     background:
     rgba(255,255,255,.45);
@@ -252,51 +247,7 @@ border-bottom:1px solid rgba(42,37,33,.08);
    BACKGROUND
 =========================================================== */
 
-.projects-section::before {
 
-    content: "";
-
-    position: absolute;
-
-    width: 450px;
-
-    height: 450px;
-
-    border-radius: 50%;
-
-    top: -140px;
-
-    left: -120px;
-
-    background: rgba(193,98,45,.18);
-
-    filter: blur(90px);
-
-    z-index: -1;
-}
-
-.projects-section::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 350px;
-
-    height: 350px;
-
-    border-radius: 50%;
-
-    bottom: -120px;
-
-    right: -120px;
-
-    background: rgba(248,228,204,.25);
-
-    filter: blur(90px);
-
-    z-index: -1;
-}
 
 /* ===========================================================
    RESPONSIVE
