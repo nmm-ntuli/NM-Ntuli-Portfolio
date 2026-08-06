@@ -70,7 +70,7 @@
 
     font-size: 1.4rem;
 
-    color: var(--color-primary);
+    color: var(--color-primary-dark);
 }
 
 .hero-title {
@@ -136,20 +136,20 @@
 
 .btn-primary {
 
-    color: white;
+    color: var(--color-ink);
 
     background: var(--color-primary);
 
-    box-shadow: 0 20px 45px rgba(155,127,214,.28);
+    box-shadow: 0 20px 45px rgba(140,127,217,.32);
 }
 
 .btn-primary:hover {
 
     transform: translateY(-4px);
 
-    background: var(--color-primary-dark);
+    background: #7a6cc9;
 
-    box-shadow: 0 28px 55px rgba(155,127,214,.32);
+    box-shadow: 0 28px 55px rgba(140,127,217,.38);
 }
 
 .btn-secondary {

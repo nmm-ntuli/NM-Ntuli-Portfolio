@@ -69,7 +69,7 @@ html, body {
 
     background: var(--color-surface-muted);
 
-    color: var(--color-primary);
+    color: var(--color-primary-dark);
 
     font-size: .75rem;
 
@@ -97,7 +97,7 @@ html, body {
 
     font-size: 1.3rem;
 
-    color: var(--color-primary);
+    color: var(--color-primary-dark);
 }
 
 .gate-card p {

@@ -4,9 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) return;
 
-    const BLOOM_COLORS = ['#9B7FD6', '#DD8A34', '#2B3A5C', '#7EA1EA', '#F0B454'];
-    const STEM_COLOR = '#3D3252';
-    const CENTER_COLOR = '#F0B454';
+    // Orange/yellow/navy/blue are the brand's "set" — used together as small
+    // individual accents like these blooms. Purple is reserved as the single
+    // brand accent elsewhere, so it's deliberately left out of this rotation.
+    const BLOOM_COLORS = ['#E8964A', '#E8D98A', '#1F2937', '#6FA8DC'];
+    const STEM_COLOR = '#241B3D';
+    const CENTER_COLOR = '#1F2937';
 
     const MAX_FLOWERS = 30;
     const LIFESPAN = 3.4; // seconds

@@ -33,15 +33,17 @@
     }
   }, { passive: true });
 
-  // palette built from the requested colors, paired as (light wing tip, deep wing base)
+  // palette built from the brand system: orange/yellow/navy/blue are a set and
+  // pair together freely; purple is the single reserved accent, so it only
+  // pairs with its own darker shade (used sparingly, never mixed with the set).
   const COLORS = [
-    ['#F0B454', '#DD8A34'],
-    ['#7EA1EA', '#2B3A5C'],
-    ['#F0B454', '#9B7FD6'],
-    ['#E8E39D', '#2B3A5C'],
-    ['#7EA1EA', '#9B7FD6'],
-    ['#9B7FD6', '#DD8A34'],
-    ['#E8E39D', '#7EA1EA']
+    ['#E8964A', '#1F2937'],
+    ['#6FA8DC', '#1F2937'],
+    ['#E8D98A', '#1F2937'],
+    ['#E8964A', '#6FA8DC'],
+    ['#E8D98A', '#6FA8DC'],
+    ['#8C7FD9', '#6F62BE'],
+    ['#E8964A', '#E8D98A']
   ];
 
   const COUNT = 7;
@@ -161,8 +163,8 @@
 
     // body: head, thorax, abdomen as soft dark capsule
     const bodyGrad = ctx.createLinearGradient(0, -s * 0.4, 0, s * 0.5);
-    bodyGrad.addColorStop(0, '#241B38');
-    bodyGrad.addColorStop(1, '#3D3252');
+    bodyGrad.addColorStop(0, '#241B3D');
+    bodyGrad.addColorStop(1, '#4A3F6B');
     ctx.fillStyle = bodyGrad;
     ctx.beginPath();
     ctx.ellipse(0, s * 0.05, s * 0.06, s * 0.45, 0, 0, Math.PI * 2);
@@ -174,7 +176,7 @@
     ctx.fill();
 
     // antennae
-    ctx.strokeStyle = '#241B38';
+    ctx.strokeStyle = '#241B3D';
     ctx.lineWidth = s * 0.02;
     ctx.lineCap = 'round';
     ctx.beginPath();
@@ -183,7 +185,7 @@
     ctx.moveTo(0, -s * 0.46);
     ctx.quadraticCurveTo(s * 0.12, -s * 0.62, s * 0.18, -s * 0.72);
     ctx.stroke();
-    ctx.fillStyle = '#241B38';
+    ctx.fillStyle = '#241B3D';
     ctx.beginPath();
     ctx.arc(-s * 0.18, -s * 0.72, s * 0.025, 0, Math.PI * 2);
     ctx.arc(s * 0.18, -s * 0.72, s * 0.025, 0, Math.PI * 2);

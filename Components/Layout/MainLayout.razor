@@ -1,12 +1,10 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="legend-strip" aria-hidden="true">
-    <span class="legend-primary"></span>
     <span class="legend-accent"></span>
     <span class="legend-sand"></span>
     <span class="legend-navy"></span>
     <span class="legend-sky"></span>
-    <span class="legend-gold"></span>
 </div>
 
 <div class="page-shell">
@@ -14,6 +12,14 @@
         <a class="brand" href="#home">
             <Monogram Size="34" />
         </a>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" />
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
         <nav class="nav-links">
             <a href="#home">Home</a>
             <a href="#journey">Journey</a>

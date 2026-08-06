@@ -6,29 +6,30 @@
     --font-mono: 'IBM Plex Mono', 'SF Mono', monospace;
 
     /* Surfaces */
-    --color-bg: #f6f3ec;
-    --color-surface: #ffffff;
+    --color-bg: #f5f1e6;
+    --color-surface: #fbf9f3;
     --color-surface-muted: #f1ecdd;
     --color-surface-hover: #eae2c8;
+    --color-line: #e2dcc9;
 
     /* Text */
-    --color-ink: #241b38;
-    --color-ink-soft: #3d3252;
-    --color-muted: #5b5470;
-    --color-muted-2: #7d7692;
+    --color-ink: #241b3d;
+    --color-ink-soft: #6e6580;
+    --color-muted: #6e6580;
+    --color-muted-2: #857c96;
 
-    /* Brand — violet is the dominant identity color; amber is reserved
-       for the one action per view (CTAs). Navy/sky/sand/gold are the
-       supporting "data legend" palette used for variety in small accents. */
-    --color-primary: #9b7fd6;
-    --color-primary-dark: #7a5fb8;
-    --color-accent: #dd8a34;
-    --color-accent-dark: #b5701f;
+    /* Brand — purple is the single accent: reserve it for the one thing
+       an eye should land on (wordmark, icons, CTAs). Orange/yellow/navy/blue
+       are a set, used together only in the legend stripe or as small dots —
+       never picked individually elsewhere. */
+    --color-primary: #8c7fd9;
+    --color-primary-dark: #6f62be;
+    --color-accent: #e8964a;
+    --color-accent-dark: #c97733;
 
-    --color-navy: #2b3a5c;
-    --color-sky: #7ea1ea;
-    --color-sand: #e8e39d;
-    --color-gold: #f0b454;
+    --color-navy: #1f2937;
+    --color-sky: #6fa8dc;
+    --color-sand: #e8d98a;
 }
 
 html {
@@ -76,13 +77,13 @@ h1, h2, h3, h4 {
 }
 
 a, .btn-link {
-    color: var(--color-primary);
+    color: var(--color-primary-dark);
 }
 
 .btn-primary {
-    color: #fff;
+    color: var(--color-ink);
     background-color: var(--color-primary);
-    border-color: var(--color-primary-dark);
+    border-color: var(--color-primary);
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {

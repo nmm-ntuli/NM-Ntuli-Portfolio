@@ -11,12 +11,10 @@
     flex: 1;
 }
 
-.legend-primary { background: var(--color-primary); }
 .legend-accent { background: var(--color-accent); }
 .legend-sand { background: var(--color-sand); }
 .legend-navy { background: var(--color-navy); }
 .legend-sky { background: var(--color-sky); }
-.legend-gold { background: var(--color-gold); }
 
 .page-shell {
     min-height: 100vh;
@@ -37,12 +35,48 @@
 }
 
 .top-bar {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.95rem 1.2rem;
     margin: 0 auto 1rem;
     max-width: 1180px;
+}
+
+.nav-toggle-checkbox {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+}
+
+.nav-toggle-label span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--color-ink);
+    border-radius: 2px;
+    transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.nav-toggle-checkbox:checked ~ .nav-toggle-label span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle-checkbox:checked ~ .nav-toggle-label span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle-checkbox:checked ~ .nav-toggle-label span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 .top-bar.is-hidden {
@@ -123,6 +157,39 @@
     top: 0.5rem;
 }
 
+@media (max-width: 900px) {
+    .nav-toggle-label {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 0.6rem);
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.3rem;
+        background: var(--color-surface);
+        border: 1px solid rgba(42,37,33,0.1);
+        border-radius: 24px;
+        padding: 1rem;
+        box-shadow: 0 18px 45px rgba(42,37,33,0.14);
+    }
+
+    .nav-toggle-checkbox:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .nav-links a,
+    .nav-links .nav-cta {
+        width: 100%;
+        text-align: center;
+        padding: 0.7rem;
+    }
+}
+
 @media (max-width: 640px) {
     .page-shell {
         padding: 0.8rem;
@@ -131,9 +198,5 @@
     .top-bar {
         border-radius: 28px;
         padding: 0.9rem 1rem;
-    }
-
-    .nav-links {
-        gap: 0.7rem;
     }
 }
