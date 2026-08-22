@@ -1,6 +1,6 @@
 # Nolwazi Ntuli — Portfolio
 
-A personal portfolio site built with Blazor Server (.NET 8), showcasing my work bridging business strategy and software engineering, including [FunduLwazi](https://fundulwazi-ethjdqbpgnbpbvek.southafricanorth-01.azurewebsites.net), an AI-powered document intelligence platform.
+A personal portfolio site built with Blazor Server (.NET 8), showcasing my work bridging business strategy and software engineering, including [FunduLwazi](https://fundulwazi.nolwazintuli.com), an AI-powered document intelligence platform.
 
 ## Tech stack
 
