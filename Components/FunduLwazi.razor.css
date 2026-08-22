@@ -17,39 +17,53 @@
    STORY POPUP
 =========================================================== */
 
-.info-button {
+.project-links {
 
-    width: 44px;
+    display: flex;
 
-    height: 44px;
+    align-items: center;
 
-    border-radius: 50%;
+    gap: 1.5rem;
 
-    border: 1px solid rgba(42,37,33,.12);
+    flex-wrap: wrap;
 
-    background: var(--color-surface);
+    margin-top: 1.25rem;
+}
 
-    color: var(--color-ink);
+.story-trigger {
 
-    font-size: 1rem;
+    appearance: none;
 
-    font-weight: 700;
+    -webkit-appearance: none;
 
+    border: none;
+
+    background: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    font: inherit;
+
+    font-size: .85rem;
+
+    font-weight: 500;
+
+    color: var(--color-muted);
+
+    text-decoration: none;
 
     cursor: pointer;
 
-    transition: all .3s ease;
+    transition: color .25s ease, transform .25s ease;
 }
 
-.info-button:hover {
+.story-trigger:hover {
 
-    transform: translateY(-3px);
+    color: var(--color-ink);
 
-    background: var(--color-ink);
-
-    color: white;
-
-    box-shadow: 0 18px 40px rgba(42,37,33,.18);
+    transform: translateX(4px);
 }
 
 .story-overlay {
@@ -226,8 +240,6 @@
 .visit-link {
 
     display: inline-flex;
-
-    margin-top: 1.25rem;
 
     font-weight: 600;
 
