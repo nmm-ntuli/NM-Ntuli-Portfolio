@@ -56,6 +56,15 @@ public class AccessGateMiddleware
 
         if (HasValidSession(context))
         {
+            if (context.Request.Query.ContainsKey("key"))
+            {
+                // A returning visitor reused the ?key= link and already has a valid
+                // session; strip the stale key from the URL instead of letting it
+                // sit in the address bar for the whole visit.
+                context.Response.Redirect(context.Request.Path, permanent: false);
+                return;
+            }
+
             await _next(context);
             return;
         }
